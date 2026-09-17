@@ -2,7 +2,7 @@
 
 Sistema informático de consola, desenvolvido em **Java**, para apoiar os bibliotecários na gestão do inventário de livros, dos utilizadores registados e do histórico de empréstimos/devoluções. Foi desenvolvido no âmbito da unidade curricular de Programação, no curso de Licenciatura em Engenharia Informática da **UnISCED (Universidade Aberta ISCED)**.
 
-> Repositório público: **`<COLOCAR_AQUI_O_LINK_DO_REPOSITORIO_GITHUB>`**
+> Repositório público: **`<https://github.com/Rjofrice/Biblioteca-Municipal>`**
 
 ---
 
@@ -50,7 +50,7 @@ O sistema segue uma organização simples em **camada única (console + lógica 
 - **`Biblioteca`** — núcleo do sistema; mantém a "base de dados" em memória e implementa toda a lógica de negócio.
 - **`Main`** — ponto de entrada da aplicação; apresenta o menu interativo em consola e trata a interação com o utilizador.
 
-Conforme pedido no enunciado, a informação **não é guardada em coleções da *Java Collections Framework*** (`ArrayList`, `HashMap`, etc.), mas sim em:
+Conforme pedido, a informação **não é guardada em coleções da *Java Collections Framework*** (`ArrayList`, `HashMap`, etc.), mas sim em:
 
 - **Vetores/arrays** dinâmicos (`Livro[]`, `Utilizador[]`, `Emprestimo[]`), redimensionados manualmente (duplicando a capacidade) sempre que ficam cheios — implementação clássica de um *array dinâmico*.
 - Uma **matriz de inteiros** `int[matrizEmprestimosAtivos][ ]`, de dimensão `utilizadores × livros`, em que a posição `[i][j]` guarda o número de empréstimos atualmente ativos entre o utilizador de índice `i` e o livro de índice `j`. Esta matriz é atualizada em cada empréstimo/devolução e permite, por exemplo, verificar rapidamente se um determinado utilizador tem um exemplar de um determinado livro em seu poder.
@@ -92,7 +92,7 @@ javac -version
 ### 1. Clonar o repositório
 
 ```bash
-git clone <COLOCAR_AQUI_O_LINK_DO_REPOSITORIO_GITHUB>
+git clone <https://github.com/Rjofrice/Biblioteca-Municipal>
 cd biblioteca-municipal
 ```
 
@@ -159,7 +159,7 @@ O programa foi testado manualmente, percorrendo todos os itens do menu com cená
 
 ## ⚠ Limitações conhecidas
 
-- Os dados residem apenas em memória: **ao fechar o programa, toda a informação é perdida** (não existe persistência em ficheiro ou base de dados), conforme especificado no enunciado do trabalho.
+- Os dados residem apenas em memória: **ao fechar o programa, toda a informação é perdida** (não existe persistência em ficheiro ou base de dados).
 - Não existe autenticação de bibliotecários (o sistema assume um único operador de confiança por sessão).
 - A capacidade dos vetores é ajustada automaticamente (duplicando), pelo que não há um limite prático de registos além da memória disponível.
 
@@ -172,7 +172,7 @@ O programa foi testado manualmente, percorrendo todos os itens do menu com cená
 
 ## 👤 Autor
 
-Trabalho realizado no âmbito da disciplina de Programação — Licenciatura em Engenharia Informática, Faculdade de Engenharia e Agricultura, UnISCED (Universidade Aberta ISCED).
+Trabalho realizado no âmbito da disciplina de Programação — Licenciatura em Engenharia Informática, Faculdade de Engenharia e Agricultura, UnISCED (Universidade Aberta ISCED), pelo estudante Rivaldo Conde Jofrice.
 
 ## 📄 Licença
 
