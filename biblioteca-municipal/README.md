@@ -1,4 +1,4 @@
-# 📚 Sistema de Gestão da Biblioteca Municipal
+# Sistema de Gestão da Biblioteca Municipal
 
 Sistema informático de consola, desenvolvido em **Java**, para apoiar os bibliotecários na gestão do inventário de livros, dos utilizadores registados e do histórico de empréstimos/devoluções. Foi desenvolvido no âmbito da unidade curricular de Programação, no curso de Licenciatura em Engenharia Informática da **UnISCED (Universidade Aberta ISCED)**.
 
@@ -6,7 +6,7 @@ Sistema informático de consola, desenvolvido em **Java**, para apoiar os biblio
 
 ---
 
-## 📖 Índice
+## Índice
 
 1. [Descrição do projeto](#-descrição-do-projeto)
 2. [Funcionalidades](#-funcionalidades)
@@ -23,11 +23,11 @@ Sistema informático de consola, desenvolvido em **Java**, para apoiar os biblio
 
 ---
 
-## 📌 Descrição do projeto
+## Descrição do projeto
 
 Com o crescimento do número de leitores, a Biblioteca Municipal necessitava de uma ferramenta simples e fiável para automatizar tarefas antes feitas manualmente: registar livros, controlar quantos exemplares estão disponíveis, saber quem tem cada livro emprestado e produzir estatísticas de utilização. Este programa responde a essa necessidade através de um **menu interativo em consola**, sem dependências externas, que mantém uma base de dados simulada **em memória** (usando vetores/arrays e uma matriz), reiniciada sempre que o programa é executado.
 
-## ✅ Funcionalidades
+## Funcionalidades
 
 | # | Funcionalidade | Descrição |
 |---|---|---|
@@ -40,7 +40,7 @@ Com o crescimento do número de leitores, a Biblioteca Municipal necessitava de 
 | 7 | **Estatísticas** | Mostra o livro mais requisitado da biblioteca, o total histórico de empréstimos e o número de empréstimos atualmente em curso. |
 | 8 | **Listagem de Utilizadores** | Lista todos os utilizadores registados no sistema. |
 
-## 🏗 Arquitetura e estrutura de dados
+## Arquitetura e estrutura de dados
 
 O sistema segue uma organização simples em **camada única (console + lógica de negócio)**, dividida nas seguintes classes Java (pacote `biblioteca`):
 
@@ -55,7 +55,7 @@ Conforme pedido, a informação **não é guardada em coleções da *Java Collec
 - **Vetores/arrays** dinâmicos (`Livro[]`, `Utilizador[]`, `Emprestimo[]`), redimensionados manualmente (duplicando a capacidade) sempre que ficam cheios — implementação clássica de um *array dinâmico*.
 - Uma **matriz de inteiros** `int[matrizEmprestimosAtivos][ ]`, de dimensão `utilizadores × livros`, em que a posição `[i][j]` guarda o número de empréstimos atualmente ativos entre o utilizador de índice `i` e o livro de índice `j`. Esta matriz é atualizada em cada empréstimo/devolução e permite, por exemplo, verificar rapidamente se um determinado utilizador tem um exemplar de um determinado livro em seu poder.
 
-## 📁 Estrutura do repositório
+## Estrutura do repositório
 
 ```
 biblioteca-municipal/
@@ -74,7 +74,7 @@ biblioteca-municipal/
 └── .gitignore
 ```
 
-## ⚙ Requisitos / Dependências
+## Requisitos / Dependências
 
 - **Java Development Kit (JDK) 17 ou superior** (o projeto usa *switch expressions*, disponíveis desde o Java 14/17 LTS).
 - Não são necessárias bibliotecas externas nem gestor de dependências (Maven/Gradle) — o projeto compila apenas com as ferramentas padrão do JDK (`javac` / `java`).
@@ -87,7 +87,7 @@ java -version
 javac -version
 ```
 
-## 🚀 Configuração e execução
+## Configuração e execução
 
 ### 1. Clonar o repositório
 
@@ -110,7 +110,7 @@ Este comando compila todas as classes e coloca os ficheiros `.class` na pasta `b
 java -cp bin biblioteca.Main
 ```
 
-> 💡 Se os acentos aparecerem trocados na consola (ex.: Windows `cmd`), execute com a codificação UTF-8 explícita:
+> Se os acentos aparecerem trocados na consola (ex.: Windows `cmd`), execute com a codificação UTF-8 explícita:
 > ```bash
 > java -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -cp bin biblioteca.Main
 > ```
@@ -120,7 +120,7 @@ java -cp bin biblioteca.Main
 
 Ao arrancar, o sistema já vem com alguns **dados de demonstração** pré-carregados (3 livros e 2 utilizadores), para facilitar os testes. A partir daí, basta seguir as opções numeradas do menu.
 
-## 🖥 Como usar (exemplo de sessão)
+## Como usar (exemplo de sessão)
 
 ```
 =================================================
@@ -146,7 +146,7 @@ Empréstimo registado com sucesso!
 
 Mais exemplos, com capturas de ecrã comentadas de todas as funcionalidades, estão disponíveis na **documentação técnica** (pasta `docs/`).
 
-## 🧪 Testes realizados
+## Testes realizados
 
 O programa foi testado manualmente, percorrendo todos os itens do menu com cenários de sucesso e de erro, nomeadamente:
 
@@ -157,23 +157,23 @@ O programa foi testado manualmente, percorrendo todos os itens do menu com cená
 - Verificação das estatísticas (livro mais emprestado e totais) após múltiplas operações.
 - Introdução de valores não numéricos nos campos numéricos, validando a rejeição e nova solicitação do valor.
 
-## ⚠ Limitações conhecidas
+## Limitações conhecidas
 
 - Os dados residem apenas em memória: **ao fechar o programa, toda a informação é perdida** (não existe persistência em ficheiro ou base de dados).
 - Não existe autenticação de bibliotecários (o sistema assume um único operador de confiança por sessão).
 - A capacidade dos vetores é ajustada automaticamente (duplicando), pelo que não há um limite prático de registos além da memória disponível.
 
-## 🔭 Trabalho futuro
+## Trabalho futuro
 
 - Persistência dos dados em ficheiro (texto/CSV) ou base de dados relacional.
 - Interface gráfica (Swing/JavaFX) ou API REST.
 - Datas limite de devolução e cálculo de multas por atraso.
 - Autenticação de bibliotecários com diferentes níveis de permissão.
 
-## 👤 Autor
+## Autor
 
 Trabalho realizado no âmbito da disciplina de Programação — Licenciatura em Engenharia Informática, Faculdade de Engenharia e Agricultura, UnISCED (Universidade Aberta ISCED), pelo estudante Rivaldo Conde Jofrice.
 
-## 📄 Licença
+## Licença
 
 Projeto disponibilizado para fins académicos, ao abrigo da licença MIT (ver ficheiro `LICENSE`, se aplicável).
